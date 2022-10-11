@@ -23,3 +23,38 @@
     border-radius: 16px;
     border: 2px solid rgb(14, 43, 1);
   }
+  .placeholder{
+    margin-right: 750px;
+  }
+
+  .input{
+    padding: 15px;
+  }
+
+  input[type="text"] {
+    height: 3.5rem;
+    width: 20rem;
+    background: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    border: 2px solid #c2c2c2;
+    border-radius: 2px;
+    margin-right: 4px;
+  }
+
+  .btn{
+    height: 3.2rem;
+    width: 6.5rem;
+    background: #03a776;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+  }
+
+  
