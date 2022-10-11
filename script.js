@@ -19,3 +19,14 @@ const renderData = (data) =>{
             icon.innerHTML = 
      `<img src="https://img.icons8.com/color/2x/partly-cloudy-rain--v2.gif" style= 'height:10rem'/>`
   }
+
+  btn.addEventListener('click', function(e){
+    const city = document.getElementById('cityinput').value;
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api}`)
+    .then(res => res.json())
+    .then(data => {
+          renderData(data);
+    })
+    .catch(err => alert('Please enter a valid city'))
+  })
+  
