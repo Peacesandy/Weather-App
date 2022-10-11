@@ -30,3 +30,23 @@ const renderData = (data) =>{
     .catch(err => alert('Please enter a valid city'))
   })
   
+  window.addEventListener("load", () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        console.log(position);
+        lon = position.coords.longitude;
+        lat = position.coords.latitude;
+        
+        const base =
+  `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&` +
+  `lon=${lon}&appid=${api}`;
+  fetch(base)
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          renderData(data);
+        });
+    });
+  }
+});
